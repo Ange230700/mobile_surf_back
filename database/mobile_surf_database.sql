@@ -26,7 +26,8 @@ CREATE TABLE
 CREATE TABLE
     `SurfSpot_Influencer` (
         `surf_spot_id` INT UNSIGNED NOT NULL,
-        `influencer_id` INT UNSIGNED NOT NULL
+        `influencer_id` INT UNSIGNED NOT NULL,
+        PRIMARY KEY (`surf_spot_id`, `influencer_id`)
     );
 
 CREATE TABLE
@@ -40,7 +41,8 @@ ALTER TABLE `SurfBreakType` ADD UNIQUE `surfbreaktype_surf_break_type_name_uniqu
 CREATE TABLE
     `SurfSpot_SurfBreakType` (
         `surf_spot_id` INT UNSIGNED NOT NULL,
-        `surf_break_type_id` INT UNSIGNED NOT NULL
+        `surf_break_type_id` INT UNSIGNED NOT NULL,
+        PRIMARY KEY (`surf_spot_id`, `surf_break_type_id`)
     );
 
 CREATE TABLE
@@ -61,7 +63,8 @@ CREATE TABLE
         `kind` ENUM ('small', 'large', 'full') NOT NULL,
         `url` TEXT NULL,
         `width` INT NULL,
-        `height` INT NULL
+        `height` INT NULL,
+        PRIMARY KEY (`photo_id`, `kind`)
     );
 
 CREATE TABLE
@@ -73,7 +76,8 @@ CREATE TABLE
 CREATE TABLE
     `SurfSpot_Traveller` (
         `surf_spot_id` INT UNSIGNED NOT NULL,
-        `traveller_id` INT UNSIGNED NOT NULL
+        `traveller_id` INT UNSIGNED NOT NULL,
+        PRIMARY KEY (`surf_spot_id`, `traveller_id`)
     );
 
 ALTER TABLE `SurfSpot_Traveller` ADD CONSTRAINT `surfspot_traveller_surf_spot_id_foreign` FOREIGN KEY (`surf_spot_id`) REFERENCES `SurfSpot` (`surf_spot_id`);
