@@ -14,7 +14,10 @@ namespace mobile_surf_back.Controllers
         [Route("all")]
         public ActionResult<List<SurfSpot>> GetAll()
         {
-            string connectionString = "server=localhost;database=mobile_surf;user=root;password=;";
+            string connectionString = $"server={Environment.GetEnvironmentVariable("MYSQL_HOST")};" +
+                                      $"database={Environment.GetEnvironmentVariable("MYSQL_DATABASE")};" +
+                                      $"user={Environment.GetEnvironmentVariable("MYSQL_USER")};" +
+                                      $"password={Environment.GetEnvironmentVariable("MYSQL_PASSWORD")};";
             List<SurfSpot> spots = new List<SurfSpot>();
 
             using (MySqlConnection conn = new MySqlConnection(connectionString))
