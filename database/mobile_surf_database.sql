@@ -96,15 +96,15 @@ ALTER TABLE `Thumbnail` ADD CONSTRAINT `thumbnail_photo_id_foreign` FOREIGN KEY 
 INSERT INTO
     `Influencer` (`influencer_id`, `influencer_name`)
 VALUES
-    (1, 'recD1zp1pQYc8O7l2'),
-    (2, 'rec1ptbRPxhS8rRun'),
-    (3, 'recSkJ4HuvzAUBrdd');
+    (1, 'Liam Thompson'),
+    (2, 'Sophia Nguyen'),
+    (3, 'Jackson Lee');
 
 -- Insert traveller
 INSERT INTO
     `Traveller` (`traveller_id`, `traveller_name`)
 VALUES
-    (1, 'recWK6tW3LZH5eeWY');
+    (1, 'Ava Wilson');
 
 -- Insert surf break types
 INSERT INTO
