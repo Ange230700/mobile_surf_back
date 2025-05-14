@@ -1,6 +1,6 @@
 // Models\SurfSpotModel.cs
 
-namespace mobile_surf_back.models
+namespace MobileSurfBack.Models
 {
         public class SurfSpot
     {

@@ -2,9 +2,9 @@
 
 using Microsoft.AspNetCore.Mvc;
 using MySql.Data.MySqlClient;
-using mobile_surf_back.models;
+using MobileSurfBack.Models;
 
-namespace mobile_surf_back.Controllers
+namespace MobileSurfBack.Controllers
 {
     [ApiController]
     [Route("[controller]")]
