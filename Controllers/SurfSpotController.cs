@@ -53,13 +53,27 @@ namespace MobileSurfBack.Controllers
                         SurfSpotId = reader.GetInt32(ordId),
                         Destination = reader.GetString(ordDest),
                         Address = reader.GetString(ordAddr),
-                        StateCountry = reader.IsDBNull(ordStateCountry) ? null : reader.GetString("state_country"),
-                        DifficultyLevel = reader.IsDBNull(ordDifficulty) ? reader.GetByte("difficulty_level") : null,
-                        PeakSeasonBegin = reader.IsDBNull(ordPeakBegin) ? reader.GetDateTime("peak_season_begin") : null,
-                        PeakSeasonEnd = reader.IsDBNull(ordPeakEnd) ? reader.GetDateTime("peak_season_end") : null,
-                        MagicSeaweedLink = reader.IsDBNull(ordMagicLink) ? null : reader.GetString("magic_seaweed_link"),
-                        CreatedTime = reader.IsDBNull(ordCreated) ? reader.GetDateTime("created_time") : null,
-                        GeocodeRaw = reader.IsDBNull(ordGeocode) ? null : reader.GetString("geocode_raw")
+                        StateCountry = reader.IsDBNull(ordStateCountry)
+                                               ? null
+                                               : reader.GetString(ordStateCountry),
+                        DifficultyLevel = reader.IsDBNull(ordDifficulty)
+                                               ? null
+                                               : reader.GetByte(ordDifficulty),
+                        PeakSeasonBegin = reader.IsDBNull(ordPeakBegin)
+                                               ? null
+                                               : reader.GetDateTime(ordPeakBegin),
+                        PeakSeasonEnd = reader.IsDBNull(ordPeakEnd)
+                                               ? null
+                                               : reader.GetDateTime(ordPeakEnd),
+                        MagicSeaweedLink = reader.IsDBNull(ordMagicLink)
+                                               ? null
+                                               : reader.GetString(ordMagicLink),
+                        CreatedTime = reader.IsDBNull(ordCreated)
+                                               ? null
+                                               : reader.GetDateTime(ordCreated),
+                        GeocodeRaw = reader.IsDBNull(ordGeocode)
+                                               ? null
+                                               : reader.GetString(ordGeocode),
                     });
                 }
             }
