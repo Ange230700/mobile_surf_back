@@ -1,8 +1,8 @@
+// Controllers\SurfSpotController.cs
+
 using Microsoft.AspNetCore.Mvc;
 using MySql.Data.MySqlClient;
 using mobile_surf_back.models;
-using System;
-using System.Collections.Generic;
 
 namespace mobile_surf_back.Controllers
 {
