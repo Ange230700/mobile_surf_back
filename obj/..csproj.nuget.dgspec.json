@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\kouak\\OneDrive\\Bureau\\ada\\group_projects\\mobile_surf_back\\..csproj": {}
+    "C:\\Users\\kouak\\OneDrive\\Bureau\\ada\\personal_projects\\mobile_surf_back\\..csproj": {}
   },
   "projects": {
-    "C:\\Users\\kouak\\OneDrive\\Bureau\\ada\\group_projects\\mobile_surf_back\\..csproj": {
+    "C:\\Users\\kouak\\OneDrive\\Bureau\\ada\\personal_projects\\mobile_surf_back\\..csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\kouak\\OneDrive\\Bureau\\ada\\group_projects\\mobile_surf_back\\..csproj",
+        "projectUniqueName": "C:\\Users\\kouak\\OneDrive\\Bureau\\ada\\personal_projects\\mobile_surf_back\\..csproj",
         "projectName": ".",
-        "projectPath": "C:\\Users\\kouak\\OneDrive\\Bureau\\ada\\group_projects\\mobile_surf_back\\..csproj",
+        "projectPath": "C:\\Users\\kouak\\OneDrive\\Bureau\\ada\\personal_projects\\mobile_surf_back\\..csproj",
         "packagesPath": "C:\\Users\\kouak\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\kouak\\OneDrive\\Bureau\\ada\\group_projects\\mobile_surf_back\\obj\\",
+        "outputPath": "C:\\Users\\kouak\\OneDrive\\Bureau\\ada\\personal_projects\\mobile_surf_back\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\kouak\\AppData\\Roaming\\NuGet\\NuGet.Config",

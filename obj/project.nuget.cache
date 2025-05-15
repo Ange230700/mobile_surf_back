@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "h7QXUAQ1d0c=",
+  "dgSpecHash": "dA1rWd472+E=",
   "success": true,
-  "projectFilePath": "C:\\Users\\kouak\\OneDrive\\Bureau\\ada\\group_projects\\mobile_surf_back\\..csproj",
+  "projectFilePath": "C:\\Users\\kouak\\OneDrive\\Bureau\\ada\\personal_projects\\mobile_surf_back\\..csproj",
   "expectedPackageFiles": [
     "C:\\Users\\kouak\\.nuget\\packages\\bouncycastle.cryptography\\2.5.1\\bouncycastle.cryptography.2.5.1.nupkg.sha512",
     "C:\\Users\\kouak\\.nuget\\packages\\dotnetenv\\3.1.1\\dotnetenv.3.1.1.nupkg.sha512",
@@ -114,7 +114,7 @@
       "code": "Undefined",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Problem reading the cache file C:\\Users\\kouak\\OneDrive\\Bureau\\ada\\group_projects\\mobile_surf_back\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+      "message": "Problem reading the cache file C:\\Users\\kouak\\OneDrive\\Bureau\\ada\\personal_projects\\mobile_surf_back\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
     }
   ]
 }
