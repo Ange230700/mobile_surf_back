@@ -140,5 +140,100 @@ namespace MobileSurfBack.Controllers
 
             return Ok(spots);
         }
+
+        // GET api/surfspot/{id}
+        [HttpGet("{id}")]
+        public ActionResult<SurfSpotDto> GetById(int id)
+        {
+            var spot = new SurfSpotDto();
+            using var conn = new MySqlConnection(_connectionString);
+            conn.Open();
+
+            // 1) load base spot
+            using (var cmd = new MySqlCommand(
+                "SELECT * FROM SurfSpot WHERE surf_spot_id = @id", conn))
+            {
+                cmd.Parameters.AddWithValue("@id", id);
+                using var reader = cmd.ExecuteReader();
+                if (!reader.Read())
+                    return NotFound();
+
+                int colId = reader.GetOrdinal("surf_spot_id");
+                int colDest = reader.GetOrdinal("destination");
+                int colAddr = reader.GetOrdinal("address");
+                int colStateCountry = reader.GetOrdinal("state_country");
+                int colDifficulty = reader.GetOrdinal("difficulty_level");
+                int colPeakBegin = reader.GetOrdinal("peak_season_begin");
+                int colPeakEnd = reader.GetOrdinal("peak_season_end");
+                int colMagicLink = reader.GetOrdinal("magic_seaweed_link");
+                int colCreated = reader.GetOrdinal("created_time");
+                int colGeocode = reader.GetOrdinal("geocode_raw");
+
+                spot.SurfSpotId = reader.GetInt32(colId);
+                spot.Destination = reader.GetString(colDest);
+                spot.Address = reader.GetString(colAddr);
+                spot.StateCountry = reader.IsDBNull(colStateCountry)
+                                     ? null
+                                     : reader.GetString(colStateCountry);
+                spot.DifficultyLevel = reader.IsDBNull(colDifficulty)
+                                       ? null
+                                       : reader.GetByte(colDifficulty);
+                spot.PeakSeasonBegin = reader.IsDBNull(colPeakBegin)
+                                       ? null
+                                       : reader.GetDateTime(colPeakBegin);
+                spot.PeakSeasonEnd = reader.IsDBNull(colPeakEnd)
+                                       ? null
+                                       : reader.GetDateTime(colPeakEnd);
+                spot.MagicSeaweedLink = reader.IsDBNull(colMagicLink)
+                                        ? null
+                                        : reader.GetString(colMagicLink);
+                spot.CreatedTime = reader.IsDBNull(colCreated)
+                                   ? null
+                                   : reader.GetDateTime(colCreated);
+                spot.GeocodeRaw = reader.IsDBNull(colGeocode)
+                                        ? null
+                                        : reader.GetString(colGeocode);
+            }
+
+            // 2) photos
+            using (var cmd = new MySqlCommand(
+                "SELECT url FROM Photo WHERE surf_spot_id = @id", conn))
+            {
+                cmd.Parameters.AddWithValue("@id", id);
+                using var reader = cmd.ExecuteReader();
+                while (reader.Read())
+                    spot.PhotoUrls.Add(reader.GetString("url"));
+            }
+
+            // 3) break types
+            using (var cmd = new MySqlCommand(@"
+        SELECT bt.surf_break_type_name
+          FROM SurfSpot_SurfBreakType ss
+          JOIN SurfBreakType bt 
+            ON ss.surf_break_type_id = bt.surf_break_type_id
+         WHERE ss.surf_spot_id = @id", conn))
+            {
+                cmd.Parameters.AddWithValue("@id", id);
+                using var reader = cmd.ExecuteReader();
+                while (reader.Read())
+                    spot.BreakTypes.Add(reader.GetString("surf_break_type_name"));
+            }
+
+            // 4) influencers
+            using (var cmd = new MySqlCommand(@"
+        SELECT i.influencer_name
+          FROM SurfSpot_Influencer si
+          JOIN Influencer i 
+            ON si.influencer_id = i.influencer_id
+         WHERE si.surf_spot_id = @id", conn))
+            {
+                cmd.Parameters.AddWithValue("@id", id);
+                using var reader = cmd.ExecuteReader();
+                while (reader.Read())
+                    spot.Influencers.Add(reader.GetString("influencer_name"));
+            }
+
+            return Ok(spot);
+        }
     }
 }
