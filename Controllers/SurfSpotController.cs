@@ -24,9 +24,9 @@ namespace MobileSurfBack.Controllers
 
         // GET api/surfspot/all
         [HttpGet("all")]
-        public ActionResult<List<SurfSpotDto>> GetAll()
+        public ActionResult<List<SurfSpot>> GetAll()
         {
-            var spots = new List<SurfSpotDto>();
+            var spots = new List<SurfSpot>();
             using var conn = new MySqlConnection(_connectionString);
             conn.Open();
 
@@ -48,7 +48,7 @@ namespace MobileSurfBack.Controllers
 
                 while (reader.Read())
                 {
-                    spots.Add(new SurfSpotDto
+                    spots.Add(new SurfSpot
                     {
                         SurfSpotId = reader.GetInt32(ordId),
                         Destination = reader.GetString(ordDest),
@@ -143,9 +143,9 @@ namespace MobileSurfBack.Controllers
 
         // GET api/surfspot/{id}
         [HttpGet("{id}")]
-        public ActionResult<SurfSpotDto> GetById(int id)
+        public ActionResult<SurfSpot> GetById(int id)
         {
-            var spot = new SurfSpotDto();
+            var spot = new SurfSpot();
             using var conn = new MySqlConnection(_connectionString);
             conn.Open();
 
