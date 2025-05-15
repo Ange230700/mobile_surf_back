@@ -12,8 +12,8 @@ namespace MobileSurfBack.Controllers
     {
         private const string ColSurfSpotId = "surf_spot_id";
 
-        private readonly string _connectionString;
 
+        private readonly string _connectionString;
         public SurfSpotController(IConfiguration configuration)
         {
             _connectionString = $"server={Environment.GetEnvironmentVariable("MYSQL_HOST")};" +
