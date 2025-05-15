@@ -1,30 +1,32 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\cloud\\AdaTechSchool\\Projet de groupe\\moblie\\mobile_surf_back\\..csproj": {}
+    "C:\\Users\\kouak\\OneDrive\\Bureau\\ada\\personal_projects\\mobile_surf_back\\..csproj": {}
   },
   "projects": {
-    "C:\\Users\\cloud\\AdaTechSchool\\Projet de groupe\\moblie\\mobile_surf_back\\..csproj": {
+    "C:\\Users\\kouak\\OneDrive\\Bureau\\ada\\personal_projects\\mobile_surf_back\\..csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\cloud\\AdaTechSchool\\Projet de groupe\\moblie\\mobile_surf_back\\..csproj",
+        "projectUniqueName": "C:\\Users\\kouak\\OneDrive\\Bureau\\ada\\personal_projects\\mobile_surf_back\\..csproj",
         "projectName": ".",
-        "projectPath": "C:\\Users\\cloud\\AdaTechSchool\\Projet de groupe\\moblie\\mobile_surf_back\\..csproj",
-        "packagesPath": "C:\\Users\\cloud\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\cloud\\AdaTechSchool\\Projet de groupe\\moblie\\mobile_surf_back\\obj\\",
+        "projectPath": "C:\\Users\\kouak\\OneDrive\\Bureau\\ada\\personal_projects\\mobile_surf_back\\..csproj",
+        "packagesPath": "C:\\Users\\kouak\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\kouak\\OneDrive\\Bureau\\ada\\personal_projects\\mobile_surf_back\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\cloud\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\kouak\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net7.0"
+          "net8.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net7.0": {
-            "targetAlias": "net7.0",
+          "net8.0": {
+            "targetAlias": "net8.0",
             "projectReferences": {}
           }
         },
@@ -32,15 +34,28 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
-        "net7.0": {
-          "targetAlias": "net7.0",
+        "net8.0": {
+          "targetAlias": "net8.0",
           "dependencies": {
+            "DotNetEnv": {
+              "target": "Package",
+              "version": "[3.1.1, )"
+            },
             "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
               "version": "[7.0.0, )"
+            },
+            "MySql.Data": {
+              "target": "Package",
+              "version": "[9.3.0, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
@@ -66,7 +81,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.408/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
