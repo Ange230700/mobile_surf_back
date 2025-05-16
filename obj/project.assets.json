@@ -6081,7 +6081,7 @@
     "version": "1.0.0",
     "restore": {
       "projectUniqueName": "C:\\Users\\kouak\\OneDrive\\Bureau\\ada\\personal_projects\\mobile_surf_back\\..csproj",
-      "projectName": ".",
+      "projectName": "MobileSurfBack",
       "projectPath": "C:\\Users\\kouak\\OneDrive\\Bureau\\ada\\personal_projects\\mobile_surf_back\\..csproj",
       "packagesPath": "C:\\Users\\kouak\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\kouak\\OneDrive\\Bureau\\ada\\personal_projects\\mobile_surf_back\\obj\\",
@@ -6157,13 +6157,5 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.408/PortableRuntimeIdentifierGraph.json"
       }
     }
-  },
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Problem reading the cache file C:\\Users\\kouak\\OneDrive\\Bureau\\ada\\personal_projects\\mobile_surf_back\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
-    }
-  ]
+  }
 }
